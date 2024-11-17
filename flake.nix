@@ -30,6 +30,10 @@
               numpy
               ucimlrepo
               seaborn
+              scipy
+              scikit-learn
+              imbalanced-learn
+              xgboost
               # libevdev
               # nbconvert
               # pandocfilters
