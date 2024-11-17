@@ -29,6 +29,7 @@
               pandas
               numpy
               ucimlrepo
+              seaborn
               # libevdev
               # nbconvert
               # pandocfilters
