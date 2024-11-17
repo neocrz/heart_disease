@@ -1,7 +1,7 @@
 {
   description = "A Nix-flake-based Python development environment";
 
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+  inputs.nixpkgs.url = "pinned-nixpkgs";
   
   outputs = { self, nixpkgs }:
     let
@@ -12,21 +12,23 @@
     in
     {
       devShells = forEachSupportedSystem ({ pkgs }: {
-        default = pkgs.mkShell {
+        default = let
+          python = pkgs.python311.override {
+            self = python;
+            packageOverrides = pyfinal: pyprev: {
+              ucimlrepo = pyfinal.callPackage ./ucimlrepo.nix { };
+            };
+          };
+        in
+        pkgs.mkShell {
           venvDir = ".venv";
           packages = with pkgs; [ 
-            python311
-            # pandoc
-            # playwright
-            # playwright-driver
-            # texliveTeTeX
-            # texlivePackages.tcolorbox
-          ] ++
-            (with pkgs.python311Packages; [
+            (python.withPackages (python-pkgs: with python-pkgs; [
               jupyterlab
               matplotlib
               pandas
               numpy
+              ucimlrepo
               # libevdev
               # nbconvert
               # pandocfilters
@@ -35,7 +37,9 @@
               # pypandoc
               venvShellHook
               # tensorflow
-          ]);
+            ]))
+          ];
+
           postVenvCreation = ''
             unset SOURCE_DATE_EPOCH
           '';
