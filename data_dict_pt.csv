@@ -1,0 +1,15 @@
+Var;Nome;Função;Tipo;Descrição;Unidade;Categorias
+age;Idade;Variável;Int;Idade do paciente;;
+sex;Sexo;Variável;Cat;Gênero;;
+cp;Dor no Peito;Variável;Cat;Tipo de dor no peito;;1: Angina típica, 2: Angina atípica, 3: Dor não anginosa, 4: Assintomática
+trestbps;PA em Repouso;Variável;Int;Pressão arterial em repouso;mm Hg;
+chol;Colesterol;Variável;Int;Nível de colesterol no soro;mg/dL;
+fbs;Glicemia Jejum;Variável;Cat;Glicemia em jejum > 120 mg/dL;;0: Falso, 1: Verdadeiro
+restecg;Resultados ECG;Variável;Cat;Resultados do eletrocardiograma em repouso;;0: Normal, 1: Anormalidade ST-T, 2: Hipertrofia ventricular esquerda provável
+thalach;FC Máxima;Variável;Int;Frequência cardíaca máxima atingida;bpm;
+exang;Angina Exercício;Variável;Cat;Angina provocada pelo exercício;;0: Não, 1: Sim
+oldpeak;Depressão ST;Variável;Int;Depressão do segmento ST pelo exercício;mm;
+slope;Inclinação ST;Variável;Cat;Inclinação do segmento ST no pico;;1: Ascendente, 2: Plana, 3: Descendente
+ca;Vasos;Variável;Int;Número de vasos principais detectados;;0-3
+thal;Condição Cardíaca;Variável;Cat;Tipo de condição cardíaca;;3: Normal, 6: Defeito fixo, 7: Defeito reversível
+num;Diagnóstico;Alvo;Cat;Diagnóstico de doença cardíaca (angiográfico);;0: Sem doença, 1-4: Gravidade da doença (>50% estreitamento)
