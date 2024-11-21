@@ -1,6 +1,6 @@
 Var;Name;Role;Type;Desc;Unit;Categories
 age;Age;Feature;Int;Patient's age;;
-sex;Sex;Feature;Cat;Gender;;
+sex;Sex;Feature;Cat;Gender;;0: Female, 1: Male
 cp;Chest Pain;Feature;Cat;Type of chest pain;;1: Typical angina, 2: Atypical angina, 3: Non-anginal pain, 4: Asymptomatic
 trestbps;Rest BP;Feature;Int;Resting blood pressure;mm Hg;
 chol;Cholesterol;Feature;Int;Serum cholesterol level;mg/dL;
@@ -10,6 +10,6 @@ thalach;Max HR;Feature;Int;Maximum heart rate achieved;bpm;
 exang;Exercise AP;Feature;Cat;Angina triggered by exercise;;0: No, 1: Yes
 oldpeak;ST Depression;Feature;Int;ST depression induced by exercise;mm;
 slope;ST Slope;Feature;Cat;Slope of peak ST segment;;1: Upsloping, 2: Flat, 3: Downsloping
-ca;Vessels;Feature;Int;Number of major vessels detected;;0-3
+ca;Vessels;Feature;Int;Number of major vessels detected;;0: 0, 1: 1, 2: 2, 3: 3
 thal;Heart Condition;Feature;Cat;Type of heart condition;;3: Normal, 6: Fixed defect, 7: Reversible defect
-num;Diagnosis;Target;Cat;Heart disease diagnosis (angiographic);;0: No disease, 1-4: Disease severity (>50% narrowing)
+num;Diagnosis;Target;Cat;Heart disease diagnosis;;0: No disease, 1: Disease
