@@ -1,0 +1,5 @@
+.direnv/
+.venv/
+.ipynb_checkpoints/
+pin_nixpkgs.sh
+flake.lock
